@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simons CV based on '"ModernCV" CV and Cover Letter'
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% Simons CV. I slimmed down moderncv to my needs, missusing it most likely
+% heavily, but still does it's job nicely :-)
+%
+% author:
+% Simon Schiele (simon.codingmonkey@gmail.com)
+%
+% The original template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{ngerman}
+
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Simon} % Your first name
+\familyname{Schiele} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+% \title{Lebenslauf}
+\address{Vilbeler Landstra"se 83}{60388 Frankfurt}
+\mobile{(+49) 152 5330 7817}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\email{simon.codingmonkey@gmail.com}
+% \homepage{http://simon.psaux.de}{http://simon.psaux.de/} % The first argument is the url for the clickable link, the second argument is the url displayed in the template
+% \extrainfo{additional information}
+\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{``Never allow the same bug to bite you twice.''- Steve Maguire}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\setlength{\hintscolumnwidth}{0.19\textwidth}
+\setlength{\parskip}{20em}
+
+\makecvtitle % Print the CV title
+
+\section{Technische Kenntnisse\newline{}}
+
+\cvitemwithcomment{Programmierung}{Python, PHP, Bash}{(Level: sehr gut)}
+\cvitemwithcomment{}{JavaScript}{(Level: gut)}
+\cvitemwithcomment{Datenbanken}{PostgreSQL, MySQL, SQLite, MongoDB}{}
+\cvitemwithcomment{Entwicklungstools}{Git, Subversion, Mercurial, Jira, Confluence}{}
+\cvitemwithcomment{Testing}{Jenkins, Git-Hooks, pytest, python-unittest}{}
+\cvitemwithcomment{}{Selenium, PhantomJS, Apache ab\newline{}\newline{}}{}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Beruflicher Werdegang\newline{}}
+
+\cventry{06/2009--02/2015}{Software Developer}{\textsc{Ypsilon.Net AG}}{Frankfurt}{}{
+\newline{}\newline{}
+\begin{itemize}
+\item Entwicklung von Backend-Anwendungen und Webservices im Tourismus-\newline{}und Finanzbereich (Python, PHP)
+\item Aufbau und Pflege eines PCI DSS Scope (Class 1)
+\item Administration von Application-, Entwicklungs- und Webservern
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2006--12/2008}{Software Engineer}{\textsc{ReflexMedia GmbH}}{Limburg}{}{
+\newline{}\newline{}
+\begin{itemize}
+\item Entwicklung eines POS Multimedia Systems auf Linux Basis
+\item Aufbau und Pflege der firmeneigenen GNU/Linux Distribution (Debian basiert)
+\item Administration und Pflege mehrerer hundert Client Systeme\newline{}(Dezentral, Deutschlandweit)
+\item Administration der Linux Web-, Entwicklungs- und Packetserver
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2005--12/2005}{Mediengestalter}{\textsc{ReflexMedia GmbH}}{Limburg}{}{6 Monatiges Praktikum im Rahmen der Ausbildung zum Mediengestalter
+% \newline{}\newline{}
+\begin{itemize}
+\item Entwicklung einer Demonstartionsumgebung f"ur dynamische POS Werbung (Flash/ActionScript, PHP)
+\item Weiterentwicklung von bestehenden Webshops (Bash, PHP)
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2001--06/2002}{Data Center Administrator}{\textsc{Innovative Software AG}}{Frankfurt}{}{Jahrespraktikum im Rahmen der Fachoberschule
+% \newline{}\newline{}
+\begin{itemize}
+\item Administration von etwa 1000 Produktivservern (RedHat GNU/Linux)
+\item Vor-Ort Service in diversen Rechenzentren im Frankfurter Raum
+\item Pflege und Erweiterung des Administratoren Intranets (PHP, JavaScript)
+\newline{}\newline{}
+\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Ausbildung\newline{}}
+
+\cventry{2004--2006}{Ausbildung: Mediengestaltung Digital- und Printmedien}{IAD}{Marburg}{}{Abschluss: Mediengestalter (IHK)\newline{}}  % Arguments not required can be left empty
+\cventry{2001--2004}{Fachoberschule}{}{B"udingen}{}{Fachrichtung: Wirtschaftsinformatik\newline{}}  % Arguments not required can be left empty
+\cventry{1995--2001}{Realschule}{Schule am Dohlberg}{B"udingen}{}{Abschluss: Mittlere Reife\newline{}}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Sprachen\newline{}}
+
+\cvitemwithcomment{Deutsch}{Muttersprache}{}
+\cvitemwithcomment{Englisch}{Fl"ussig in Wort und Schrift\newline{}}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Pers"onliche Interessen\newline{}}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Kochen}{Britische Fernsehserien}
+% Python PHP Bash Lua Git SCM Subversion PostgreSQL MySQL MongoDB JavaScript jQuery AJAX Jenkins OpenSSL Online Payment PCI-DSS MVC HTML XML CSS VimL DevOps git-flow
+
+\end{document}

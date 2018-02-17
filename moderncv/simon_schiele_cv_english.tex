@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simons CV based on '"ModernCV" CV and Cover Letter'
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% Simons CV. I slimmed down moderncv to my needs, missusing it most likely
+% heavily, but still does it's job nicely :-)
+%
+% author:
+% Simon Schiele (simon.codingmonkey@gmail.com)
+%
+% The original template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same
+% directory as this .tex file. These files provide the resume style and themes
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{ngerman}
+
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Simon}
+\familyname{Schiele}
+
+\title{Curriculum Vitae}
+\address{Vilbeler Landstrasse 83}{60388 Frankfurt, Germany}
+\mobile{(+49) 152 5330 7817}
+% \phone{(000) 111 1112}
+% \fax{(000) 111 1113}
+\email{simon.codingmonkey@gmail.com}
+% \homepage{http://simon.psaux.de}{http://simon.psaux.de/} % The first argument is the url for the clickable link, the second argument is the url displayed in the template
+% \extrainfo{additional information}
+\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+% \quote{``Never allow the same bug to bite you twice.''- Steve Maguire}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\setlength{\hintscolumnwidth}{0.19\textwidth}
+\setlength{\parskip}{20em}
+
+\makecvtitle % Print the CV title
+
+\section{Technical Knowledge\newline{}}
+
+\cvitemwithcomment{Development}{Python, C, PHP, Bash, JavaScript}{}
+\cvitemwithcomment{Databases}{PostgreSQL, MySQL, SQLite, MongoDB}{}
+\cvitemwithcomment{Tools}{Git, Subversion, Mercurial, Jira, Confluence}{}
+\cvitemwithcomment{Testing}{Jenkins, Git-Hooks, pytest, python-unittest}{}
+\cvitemwithcomment{}{Selenium, PhantomJS\newline{}\newline{}}{}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience\newline{}}
+
+\cventry{06/2009--02/2015}{Software Developer}{\textsc{Ypsilon.Net AG}}{Frankfurt}{}{
+\newline{}\newline{}
+\begin{itemize}
+\item Development of backend applications and webservices in the tourism and finance sector (Python, PHP)
+\item Head of Rental Car Development
+\item Building and maintaining a PCI-DSS scope (Class 1)
+\item Administration of application, development and web servers
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{01/2009--06/2009}{Freelancer}{\textsc{Engineering/Development}}{Frankfurt}{}{
+\newline{}\newline{}
+\begin{itemize}
+\item Prototyping of embedded devices for point-of-sale advertisement (OpenEmbedded, Python)
+\item Custom CMS and Onlineshop solutions (Python, Django, Satchmo)
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2006--12/2008}{Software Engineer}{\textsc{ReflexMedia GmbH}}{Limburg}{}{
+\newline{}\newline{}
+\begin{itemize}
+\item Development of a point-of-sale multimedia environment for dynamical advertisements (PHP, XUL, Python)
+\item Building and upkeep of the company intern GNU/Linux distribution for POS clients (Debian based)
+\item Administration and maintenance of several hundred client systems\newline{}(decentralized, Germany-wide)
+\item Administration of web, development and package servers
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2005--12/2005}{Media Designer}{\textsc{ReflexMedia GmbH}}{Limburg}{}{6-month internship as part of my apprenticeship as media designer
+% \newline{}\newline{}
+\begin{itemize}
+\item Building a demonstration wrapper for dynamical advertisements\newline{}(Flash/ActionScript, PHP)
+\item Expanding of several existing online stores (Bash, PHP)
+\newline{}\newline{}
+\end{itemize}}
+
+\cventry{06/2001--06/2002}{Data Center Administrator}{\textsc{Innovative Software AG}}{Frankfurt}{}{Internship of one year as part of the specialized secondary school diploma
+% \newline{}\newline{}
+\begin{itemize}
+\item Administration of nearly 1000 productive servers (RedHat GNU/Linux)
+\item On-site service in different data centers in the Frankfurt region
+\item Maintenance and improvements of the intranet administration toolset (PHP, JavaScript)
+\newline{}\newline{}
+\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education\newline{}}
+
+\cventry{2004--2006}{Apprenticeship: Digital Media Designer}{IAD}{Marburg}{}{Graduation: Media Designer (IHK)\newline{}}
+\cventry{2001--2004}{Specialized secondary school}{Fachoberschule}{Buedingen}{}{Subject: Business Informatics\newline{}}
+\cventry{1995--2001}{Secondary school}{Schule am Dohlberg}{Buedingen}{}{Graduation: secondary school certificate (Mittlere Reife)\newline{}\newline{}}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Language Skills\newline{}}
+
+\cvitemwithcomment{German}{native speaker}{}
+\cvitemwithcomment{English}{fluent in spoken and written form\newline{}\newline{}}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Personal Interests\newline{}}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Cooking}{Science fiction literature}
+
+\end{document}
