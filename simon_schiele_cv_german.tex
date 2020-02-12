@@ -1,27 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Simons CV based on '"ModernCV" CV and Cover Letter'
-% LaTeX Template
-% Version 1.11 (19/6/14)
+% Simons CV based on '"moderncv" CV and Cover Letter'
 %
-% Simons CV. I slimmed down moderncv to my needs, missusing it most likely
-% heavily, but still does it's job nicely :-)
+% german version
 %
-% author:
-% Simon Schiele (simon.codingmonkey@gmail.com)
+
+% The buildscripts and tex files are maintained at:
+%   https://github.com/simonschiele/curriculum-vitae/
 %
-% The original template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same
-% directory as this .tex file. These files provide the resume style and themes
-% used for structuring the document.
+% I used the awesome 'moderncv' template from:
+%   Xavier Danaux (xdanaux@gmail.com)
+%   Repo: https://github.com/xdanaux/moderncv
+%   Licence: The LaTeX Project Public Li­cense, version 1.3c
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,137 +18,160 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{classic} % 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+% German umlauts (-:
+% Even necesarry in the english CV, due to my address
 \usepackage{ngerman}
 
+% more modern bookmark implementation
+% \usepackage{bookmark}
 
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+% Reduce document margins
+\usepackage[scale=0.75]{geometry}
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{Simon} % Your first name
-\familyname{Schiele} % Your last name
+\firstname{Simon}
+\familyname{Schiele}
 
-% All information in this block is optional, comment out any lines you don't need
-\title{Curriculum Vitae}
 % \title{Lebenslauf}
-\address{Vilbeler Landstra"se 83}{60388 Frankfurt}
-\mobile{(+49) 152 5330 7817}
-% \phone{(000) 111 1112}
-% \fax{(000) 111 1113}
+\title{Curriculum Vitae}
+
+% \address{Vilbeler Landstrasse 83}{60388 Frankfurt, Germany}
+\address{Vilbeler Landstra"se 83}{60388 Frankfurt}{Germany}
+
+\phone[mobile]{(+49) 152 5330 7817}
+% \phone[fixed]{(+49) 6109 7198025}
+
 \email{simon.codingmonkey@gmail.com}
-% \homepage{http://simon.psaux.de}{http://simon.psaux.de/} % The first argument is the url for the clickable link, the second argument is the url displayed in the template
+\homepage{simon.psaux.de}
+\social[github]{simonschiele}
+% \social[linkedin]{simon-schiele-176a34b3}
+% \social[xing]{Simon_Schiele2}
+% \social[twitter]{codingmonkey23}
+% \social[gitlab]{...}
+% \social[skype]{...}
 % \extrainfo{additional information}
-\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+% first bracket is picture height, second is thickness of frame (0pt for no frame)
+\photo[70pt][0.4pt]{pictures/picture}
+
 % \quote{``Never allow the same bug to bite you twice.''- Steve Maguire}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
+% overwrites to make year-listings nicer
 \setlength{\hintscolumnwidth}{0.19\textwidth}
 \setlength{\parskip}{20em}
 
-\makecvtitle % Print the CV title
+\makecvtitle
 
-\section{Technische Kenntnisse\newline{}}
+\section{Technische Kenntnisse}
+\cvitemwithcomment{Entwicklung}{Python, C, PHP, Bash, JavaScript}{}
+\cvitemwithcomment{Linux}{Debian/Ubuntu, BSD, Yocto, Buildroot, Kernel}{}
+\cvitemwithcomment{Tools}{Jira, Confluence, Agile (Scrum/Kanban)}{}
+\cvitemwithcomment{DevOps}{SQL, NoSQL, Log/Metric Databases, AWS, Azure,}{}
+\cvitemwithcomment{}{Docker, Kubernetes, Jenkins, Git, Automation\newline{}\newline{}}{}
 
-\cvitemwithcomment{Programmierung}{Python, PHP, Bash}{(Level: sehr gut)}
-\cvitemwithcomment{}{JavaScript}{(Level: gut)}
-\cvitemwithcomment{Datenbanken}{PostgreSQL, MySQL, SQLite, MongoDB}{}
-\cvitemwithcomment{Entwicklungstools}{Git, Subversion, Mercurial, Jira, Confluence}{}
-\cvitemwithcomment{Testing}{Jenkins, Git-Hooks, pytest, python-unittest}{}
-\cvitemwithcomment{}{Selenium, PhantomJS, Apache ab\newline{}\newline{}}{}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Beruflicher Werdegang\newline{}}
+\section{Beruflicher Werdegang}
 
-\cventry{07/2015--09/2017}{Python Developer}{\textsc{ProfitBricks GmbH}}{Berlin}{}{
-\newline{}\newline{}
+\cventry{11/2017--01/2020}{Embedded Software Engineer}{\textsc{Witekio GmbH}}{Frankfurt}{}{
 \begin{itemize}
-\item Head of Development für die Cloud Datacenter Management Suite\newline{}(Python, Django, PostgreSQL, IPMI, Icinga, Cloudian)
+\item Entwicklung von Linux- und Android Board Support Packages (BSP)\newline{} (Yocto, Buildroot, AOSP, div. IoT Frameworks)
+\item Entwicklung von Linux Kernel und Userspace Device Treibern\newline{} (Input, Sensoren, Displays, Modems)
+\item Pflege und Weiterentwicklung von bestehenden Linux und Android BSPs
+\item Beratung bei Linux Entwicklung, erstellen von Migrationspfaden\newline{} und generelles troubleshooting für Hard- und Softwareprojekte\newline{}
+\end{itemize}}
+
+\cventry{09/2015--10/2017}{Python Developer}{\textsc{ProfitBricks GmbH}}{Berlin}{}{
+\begin{itemize}
+\item Entwicklung der internen Cloud Datacenter Management Suite\newline{}(Python, Django, PostgreSQL, IPMI, Icinga, Cloudian)
 \item Site Reliability Management für High Traffic API- und Frontend-Projekte
 \item Daily Operations und Incident Handling (nach ITIL/ISO)
-\item Regelmäßige schulungen
-\newline{}\newline{}
+\item Organisation von regelmäßigen internen Workshops\newline{} 'Advanced development techniques' (Themen: Python, REST)\newline{}
 \end{itemize}}
 
 \cventry{06/2009--02/2015}{Software Developer}{\textsc{Ypsilon.Net AG}}{Frankfurt}{}{
-\newline{}\newline{}
 \begin{itemize}
 \item Entwicklung von Backend-Anwendungen und Webservices im Tourismus-\newline{}und Finanzbereich (Python, PHP)
-\item Aufbau und Pflege eines PCI DSS Scope (Class 1)
-\item Administration von Application-, Entwicklungs- und Webservern
-\newline{}\newline{}
+\item Leitung Abteilung 'Rental Car Development'
+\item Aufbau und Pflege von PCI DSS (Class 1) Scope und Services
+\item Administration von Application-, Entwicklungs- und Webservern\newline{}
+\end{itemize}}
+
+\cventry{01/2009--05/2009}{Freiberufler}{\textsc{Engineering/Development}}{Frankfurt}{}{
+\begin{itemize}
+\item Prototyping von Embedded Devices für Point-of-Sale Werbung\newline{} (OpenEmbedded, Python)
+\item Entwicklungen und Pflege von CMS and Onlineshop systemen\newline{} (Python, Django, Satchmo)\newline{}
 \end{itemize}}
 
 \cventry{06/2006--12/2008}{Software Engineer}{\textsc{ReflexMedia GmbH}}{Limburg}{}{
-\newline{}\newline{}
 \begin{itemize}
-\item Entwicklung eines POS Multimedia Systems auf Linux Basis
+\item Entwicklung eines Point-of-Sale Multimedia Systems auf Linux Basis
 \item Aufbau und Pflege der firmeneigenen GNU/Linux Distribution (Debian basiert)
 \item Administration und Pflege mehrerer hundert Client Systeme\newline{}(Dezentral, Deutschlandweit)
-\item Administration der Linux Web-, Entwicklungs- und Packetserver
-\newline{}\newline{}
+\item Administration der Linux Web-, Entwicklungs- und Packetserver\newline{}
 \end{itemize}}
 
 \cventry{06/2005--12/2005}{Mediengestalter}{\textsc{ReflexMedia GmbH}}{Limburg}{}{6 Monatiges Praktikum im Rahmen der Ausbildung zum Mediengestalter
-% \newline{}\newline{}
 \begin{itemize}
 \item Entwicklung einer Demonstartionsumgebung f"ur dynamische POS Werbung (Flash/ActionScript, PHP)
-\item Weiterentwicklung von bestehenden Webshops (Bash, PHP)
-\newline{}\newline{}
+\item Weiterentwicklung von bestehenden Webshops (Bash, PHP)\newline{}
 \end{itemize}}
 
 \cventry{06/2001--06/2002}{Data Center Administrator}{\textsc{Innovative Software AG}}{Frankfurt}{}{Jahrespraktikum im Rahmen der Fachoberschule
-% \newline{}\newline{}
 \begin{itemize}
 \item Administration von etwa 1000 Produktivservern (RedHat GNU/Linux)
 \item Vor-Ort Service in diversen Rechenzentren im Frankfurter Raum
-\item Pflege und Erweiterung des Administratoren Intranets (PHP, JavaScript)
-\newline{}\newline{}
+\item Pflege und Erweiterung des Administratoren Intranets (PHP, JavaScript)\newline{}
 \end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Ausbildung\newline{}}
+\section{Ausbildung}
 
-\cventry{2004--2006}{Ausbildung: Mediengestaltung Digital- und Printmedien}{IAD}{Marburg}{}{Abschluss: Mediengestalter (IHK)\newline{}}  % Arguments not required can be left empty
-\cventry{2001--2004}{Fachoberschule}{}{B"udingen}{}{Fachrichtung: Wirtschaftsinformatik\newline{}}  % Arguments not required can be left empty
-\cventry{1995--2001}{Realschule}{Schule am Dohlberg}{B"udingen}{}{Abschluss: Mittlere Reife\newline{}}
+\cventry{2004--2006}{Ausbildung: Mediengestaltung Digital- und Printmedien}{IAD}{Marburg}{}{Abschluss: Mediengestalter (IHK)\newline{}}
+\cventry{2001--2004}{Fachoberschule}{}{B"udingen}{}{Fachrichtung: Wirtschaftsinformatik\newline{}}
+\cventry{1995--2001}{Realschule}{Schule am Dohlberg}{B"udingen}{}{Abschluss: Mittlere Reife\newline{}\newline{}}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Sprachen\newline{}}
+\section{Sprachen}
 
 \cvitemwithcomment{Deutsch}{Muttersprache}{}
-\cvitemwithcomment{Englisch}{Fl"ussig in Wort und Schrift\newline{}}{}
+\cvitemwithcomment{Englisch}{Fl"ussig in Wort und Schrift\newline{}\newline{}}{}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Pers"onliche Interessen\newline{}}
+\section{Pers"onliche Interessen}
 
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\renewcommand{\listitemsymbol}{-~}
 
-\cvlistdoubleitem{Kochen}{Britische Fernsehserien}
-% Python PHP Bash Lua Git SCM Subversion PostgreSQL MySQL MongoDB JavaScript jQuery AJAX Jenkins OpenSSL Online Payment PCI-DSS MVC HTML XML CSS VimL DevOps git-flow
+\cvlistdoubleitem{Kochen}{Science-Fiction Literatur}
+\cvlistdoubleitem{Keyboard-sammlung}{Fernsehserien}
 
 \end{document}
