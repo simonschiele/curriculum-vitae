@@ -14,31 +14,64 @@ downloads of the latest builds:
 
 If you want to get in contact with me, feel free to contact me by
 [mail](mailto:simon.codingmonkey@gmail.com "mailto:simon.codingmonkey@gmail.com")
-or via the contacts provided in the CV.
+or via the contacts provided in the CV itself.
 
 
 ## Build
 
+Clone the repository:
 ```bash
 # Clone the repo
 $ git clone https://github.com/simonschiele/curriculum-vitae
 $ cd curriculum-vitae/
+```
+
+Since the depends for latex are huge and I don't want to have these installed in 
+my day-to-day setups, I usually build this CV via a Docker container.
+
+Build via docker:
+```
+# Install depends (debian)
+$ sudo apt-get install docker.io
+
+# Build using make
+$ make containerbuild
+```
+
+Local builds are of course also supported:
+```
+# Install depends (debian)
+$ sudo apt-get install texlive-lang-german
 
 # Build using make
 $ make
 ```
 
-## Licence
-This CV template is based on 'moderncv' (Version 1.11 - 19/6/14)
 
-Changes and customization: Simon Schiele (simon.codingmonkey@gmail.com)
+## Building
+
+Inheritence in latex is weird. Loading from subdirectories changes the namespace and
+produces ugly warnings. To not have that problem and still be able to cleanly work
+with subdirectories the CV requires an overwritten TEXTINPUTS environmental variable.
+See the Makefile for more details.
+
+
+## Container
+
+The Docker container used to build the CV is based on the wonderful 'latex-versions'
+container, maintained and documented at: https://hub.docker.com/r/raabf/latex-versions
+
+
+## Licence
+
+This CV template is based on 'moderncv'. Copy was taken on 2020-02-11 and used the
+latest master at that time (2033517d3f29f9c16af1b3421d52f281e94aa2a5)
 
 Original author: Xavier Danaux (xdanaux@gmail.com)
-
-Original template downloaded from http://www.LaTeXTemplates.com
-
-
+Github: https://github.com/xdanaux/moderncv/
 Licence: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+Changes, build-stuff and the CV tex files: Simon Schiele (simon.codingmonkey@gmail.com)
 
 
 ## Author
