@@ -9,8 +9,8 @@ misusing the template heavily, but it does it's job, is easy to maintain and the
 If you are not interested in the template, but the CV itself, you can use the
 downloads of the latest builds:
 
-- [Curriculum Vitae - Simon Schiele (english)](files/cv_en.pdf)
-- [Curriculum Vitae - Simon Schiele (german)](files/cv_en.pdf)
+- [Curriculum Vitae - Simon Schiele (english)](publish/simon_schiele_cv_english.pdf)
+- [Curriculum Vitae - Simon Schiele (german)](publish/simon_schiele_cv_german.pdf)
 
 If you want to get in contact with me, feel free to contact me by
 [mail](mailto:simon.codingmonkey@gmail.com "mailto:simon.codingmonkey@gmail.com")
