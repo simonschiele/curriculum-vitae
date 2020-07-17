@@ -26,7 +26,7 @@ $ git clone https://github.com/simonschiele/curriculum-vitae
 $ cd curriculum-vitae/
 ```
 
-Since the depends for latex are huge and I don't want to have these installed in 
+Since the depends for latex are huge and I don't want to have these installed in
 my day-to-day setups, I usually build this CV via a Docker container.
 
 Build via docker:
@@ -34,14 +34,14 @@ Build via docker:
 # Install depends (debian)
 $ sudo apt-get install docker.io
 
-# Build using make
+# Build container + documents using make
 $ make containerbuild
 ```
 
 Local builds are of course also supported:
 ```
 # Install depends (debian)
-$ sudo apt-get install texlive-lang-german
+$ sudo apt-get install texlive-full texlive-lang-german
 
 # Build using make
 $ make
@@ -58,8 +58,9 @@ See the Makefile for more details.
 
 ## Container
 
-The Docker container used to build the CV is based on the wonderful 'latex-versions'
-container, maintained and documented at: https://hub.docker.com/r/raabf/latex-versions
+The Docker container used to build the CV is based on the default debian:testing image
+and pretty much only installs 'make' and 'texlive-full' on top. That is not very slim
+but should work for most of my latex needs.
 
 
 ## Licence
