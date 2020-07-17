@@ -7,9 +7,10 @@ LATEX_OPTS=-file-line-error -halt-on-error -interaction errorstopmode -output-fo
 
 CONTAINER_CMD=docker
 CONTAINER_NAME=latex-cv-build
+CONTAINER_PARAMS=
 SUDO_CMD=sudo
 
-.PHONY: all test spell clean container containerbuild build german english open cycle
+.PHONY: all test spell clean container containerbuild containerdebug build german english open cycle
 
 all: clean build
 
@@ -26,7 +27,10 @@ container:
 	make -C container
 
 containerbuild: container
-	$(SUDO_CMD) $(CONTAINER_CMD) run -it $(CONTAINER_NAME):latest echo Containerbuild not implemented
+	$(SUDO_CMD) $(CONTAINER_CMD) run -v "`pwd`":/CV -it $(CONTAINER_PARAMS) $(CONTAINER_NAME):latest
+
+containerdebug: container
+	$(SUDO_CMD) $(CONTAINER_CMD) run -v "`pwd`":/CV -it $(CONTAINER_PARAMS) $(CONTAINER_NAME):latest /bin/bash
 
 build: english german
 
