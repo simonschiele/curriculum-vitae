@@ -7,10 +7,10 @@
 % The buildscripts and tex files are maintained at:
 %   https://github.com/simonschiele/curriculum-vitae/
 %
-% I used the awesome 'moderncv' template from:
+% Uses the awesome 'moderncv' template from:
 %   Xavier Danaux (xdanaux@gmail.com)
 %   Repo: https://github.com/xdanaux/moderncv
-%   Licence: The LaTeX Project Public Li­cense, version 1.3c
+%   Licence: The LaTeX Project Public License, version 1.3c
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,13 +20,13 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{classic} % 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{classic}                         % 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                            % 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}      % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                               % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % German umlauts (-:
-% Even necesarry in the english CV, due to my address
+% Even necessary in the english CV, due to my address
 \usepackage{ngerman}
 
 % more modern bookmark implementation
@@ -80,11 +80,12 @@
 
 \section{Technical Knowledge}
 
-\cvitemwithcomment{Development}{Python, C, PHP, Bash, JavaScript}{}
+\cvitemwithcomment{Development}{Python, C, TypeScript, JavaScript, Bash, PHP}{}
 \cvitemwithcomment{Linux}{Debian/Ubuntu, BSD, Yocto, Buildroot, Kernel}{}
 \cvitemwithcomment{Tools}{Jira, Confluence, Agile (Scrum/Kanban)}{}
 \cvitemwithcomment{DevOps}{SQL, NoSQL, Log/Metric Databases, AWS, Azure,}{}
-\cvitemwithcomment{}{Docker, Kubernetes, Jenkins, Git, Automation\newline{}\newline{}}{}
+\cvitemwithcomment{}{Docker, Kubernetes, GitLab, Jenkins, Git, Automation}{}
+\cvitemwithcomment{}{}{}
 
 
 %----------------------------------------------------------------------------------------
@@ -95,19 +96,24 @@
 
 \cventry{since 07/2022}{Software Engineer}{\textsc{Sony Interactive Entertainment LLC}}{Berlin}{}{
 \begin{itemize}
-\item ...
+\item Development of software to maintain and configure datacenter grade network devices (Python, Microservices, NETCONF)\newline{}
 \end{itemize}}
 
 \cventry{12/2020-06/2022}{Software Developer}{\textsc{Link11 GmbH}}{Frankfurt}{}{
 \begin{itemize}
-\item ...
+\item Development of Security-Software (C, Python, Distributed)
+\item Analysis of pattern, architectures and requirements
+\item Development of strategies and solutions for DDoS mitigation
+\item Maintenance and development of DDoS protection-/filter technologies and services\newline{} (Bot Detection/Mitigation, API Protection, secure DNS, WAF)
+\item Implementation and maintenance of service- and server configuration management
+\item Creation, maintenance and documentation of applications and processes\newline{}
 \end{itemize}}
 
 \cventry{11/2017--01/2020}{Embedded Software Engineer}{\textsc{Witekio GmbH}}{Frankfurt}{}{
 \begin{itemize}
 \item Development of custom Linux- and Android Board Support Packages (BSP)\newline{} (Yocto, Buildroot, AOSP, div. IoT Frameworks)
-\item Development of custom Linux Kernel and Userspace Device Drivers\newline{} (Input, Sensors, Displays, Modems)
-\item Maintainance of existing Linux and Android BSPs
+\item Development of custom Linux Kernel- and Userspace Device Drivers\newline{} (Input, Sensors, Displays, Modems)
+\item Maintenance of existing Linux and Android BSPs
 \item Consulting in Linux Engineering, Migration paths and general problem finding\newline{} in hard- and software projects\newline{}
 \end{itemize}}
 
@@ -151,12 +157,14 @@
 \begin{itemize}
 \item Administration of nearly 1000 productive servers (RedHat GNU/Linux)
 \item On-site service in different data centers in the Frankfurt region
-\item Maintenance and improvements of the intranet administration toolset\newline{}(PHP, JavaScript)\newline{}
+\item Maintenance and improvements of the intranet administration toolset\newline{}(PHP, JavaScript)\newline{}\newline{}
 \end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
+
+\newpage
 
 \section{Education}
 
@@ -171,7 +179,8 @@
 \section{Language Skills}
 
 \cvitemwithcomment{German}{Native speaker}{}
-\cvitemwithcomment{English}{Fluent in spoken and written form\newline{}\newline{}}{}
+\cvitemwithcomment{English}{Fluent in spoken and written form}{}
+\cvitemwithcomment{}{}{}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -182,6 +191,6 @@
 \renewcommand{\listitemsymbol}{-~}
 
 \cvlistdoubleitem{Cooking}{Science fiction literature}
-\cvlistitem{Collecting Keyboards}
+\cvlistdoubleitem{Collecting Keyboards}{Development Tools}
 
 \end{document}

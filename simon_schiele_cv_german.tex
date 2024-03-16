@@ -7,10 +7,10 @@
 % The buildscripts and tex files are maintained at:
 %   https://github.com/simonschiele/curriculum-vitae/
 %
-% I used the awesome 'moderncv' template from:
+% Uses the awesome 'moderncv' template from:
 %   Xavier Danaux (xdanaux@gmail.com)
 %   Repo: https://github.com/xdanaux/moderncv
-%   Licence: The LaTeX Project Public Li­cense, version 1.3c
+%   Licence: The LaTeX Project Public License, version 1.3c
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,13 +20,13 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-\moderncvstyle{classic} % 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{classic}                         % 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                            % 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}      % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                               % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % German umlauts (-:
-% Even necesarry in the english CV, due to my address
+% Even necessary in the english CV, due to my address
 \usepackage{ngerman}
 
 % more modern bookmark implementation
@@ -35,8 +35,8 @@
 % Reduce document margins
 \usepackage[scale=0.75]{geometry}
 
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%\setlength{\hintscolumnwidth}{3cm}             % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}         % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -80,11 +80,12 @@
 \makecvtitle
 
 \section{Technische Kenntnisse}
-\cvitemwithcomment{Entwicklung}{Python, C, PHP, Bash, JavaScript}{}
+\cvitemwithcomment{Entwicklung}{Python, C, TypeScript, JavaScript, PHP, Bash}{}
 \cvitemwithcomment{Linux}{Debian/Ubuntu, BSD, Yocto, Buildroot, Kernel}{}
 \cvitemwithcomment{Tools}{Jira, Confluence, Agile (Scrum/Kanban)}{}
 \cvitemwithcomment{DevOps}{SQL, NoSQL, Log/Metric Databases, AWS, Azure,}{}
-\cvitemwithcomment{}{Docker, Kubernetes, Jenkins, Git, Automation\newline{}\newline{}}{}
+\cvitemwithcomment{}{Docker, Kubernetes, GitLab, Jenkins, Git, Automation}{}
+\cvitemwithcomment{}{}{}
 
 
 %----------------------------------------------------------------------------------------
@@ -95,12 +96,17 @@
 
 \cventry{seit 07/2022}{Software Engineer}{\textsc{Sony Interactive Entertainment LLC}}{Berlin}{}{
 \begin{itemize}
-\item ...
+\item Entwicklung von Software zur Wartung und Konfiguration von datacenter grade Routern und Switches (Python, Microservices, NETCONF)\newline{}
 \end{itemize}}
 
 \cventry{12/2020-06/2022}{Software Developer}{\textsc{Link11 GmbH}}{Frankfurt}{}{
 \begin{itemize}
-\item ...
+\item Entwicklung von Security-Software (C, Python, Distributed)
+\item Analyse von Mustern, Architekturen und Anforderungen
+\item Erarbeitung von Strategien und Entwicklung von Lösungen zur DDoS Mitigation
+\item Weiterentwicklung von DDoS-Schutz-/Filtertechniken und Services\newline{} (Bot Detection und Mitigation, API Protection, secure DNS, WAF)
+\item Einführung und pflege von Konfigurations Management für Server und Services
+\item Pflege, Wartung und Dokumentation von Applikationen und Prozessen
 \end{itemize}}
 
 \cventry{11/2017--01/2020}{Embedded Software Engineer}{\textsc{Witekio GmbH}}{Frankfurt}{}{
@@ -158,6 +164,8 @@
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
+\newpage
+
 \section{Ausbildung}
 
 \cventry{2004--2006}{Ausbildung: Mediengestaltung Digital- und Printmedien}{IAD}{Marburg}{}{Abschluss: Mediengestalter (IHK)\newline{}}
@@ -172,6 +180,7 @@
 
 \cvitemwithcomment{Deutsch}{Muttersprache}{}
 \cvitemwithcomment{Englisch}{Flie"send in Wort und Schrift\newline{}\newline{}}{}
+\cvitemwithcomment{}{}{}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -182,6 +191,6 @@
 \renewcommand{\listitemsymbol}{-~}
 
 \cvlistdoubleitem{Kochen}{Science-Fiction Literatur}
-\cvlistitem{Keyboards}
+\cvlistdoubleitem{Keyboards}{Development Tools}
 
 \end{document}
